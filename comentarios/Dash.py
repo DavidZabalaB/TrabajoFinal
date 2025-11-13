@@ -210,6 +210,10 @@ def clasificar_opinion(n_clicks, texto):
 # ========================
 # SERVIDOR PARA RENDER
 # ========================
+
+app = Dash(__name__)
+server = app.server  # <-- Render usa esto para Gunicorn
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 8050)))
 
