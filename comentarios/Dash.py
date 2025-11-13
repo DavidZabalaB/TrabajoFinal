@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 from dash import Dash, dcc, html, Input, Output, State
 import plotly.express as px
@@ -10,14 +11,25 @@ from huggingface_hub import InferenceClient
 # ========================
 # CONFIGURACIÓN INICIAL
 # ========================
-HF_TOKEN = "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"  # tu token de Hugging Face
+
+# 🔒 Cargar token de entorno o usar fallback local
+HF_TOKEN = os.getenv("HF_TOKEN", "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")
+
+if not HF_TOKEN:
+    raise ValueError("❌ No se encontró el token de Hugging Face. Configura HF_TOKEN en Render o en local.")
+
 client = InferenceClient(api_key=HF_TOKEN)
 MODEL = "tabularisai/multilingual-sentiment-analysis"
 
 # ========================
 # CARGA Y LIMPIEZA DE DATOS
 # ========================
-df = pd.read_csv("opinions_classified_ordenado.csv")
+DATA_PATH = "opinions_classified_ordenado.csv"
+
+if not os.path.exists(DATA_PATH):
+    raise FileNotFoundError(f"❌ No se encontró el archivo {DATA_PATH}. Asegúrate de subirlo al repositorio.")
+
+df = pd.read_csv(DATA_PATH)
 
 required_cols = ["Opinión", "Deporte", "Sentimiento IA"]
 for col in required_cols:
@@ -28,10 +40,15 @@ for col in required_cols:
 # PROCESAMIENTO DE TEXTO
 # ========================
 print("🧠 Procesando texto para nube de palabras...")
-nlp = spacy.load("es_core_news_sm")
+try:
+    nlp = spacy.load("es_core_news_sm")
+except OSError:
+    import subprocess
+    subprocess.run(["python", "-m", "spacy", "download", "es_core_news_sm"])
+    nlp = spacy.load("es_core_news_sm")
 
 def limpiar_texto(texto):
-    doc = nlp(texto.lower())
+    doc = nlp(str(texto).lower())
     palabras = [
         token.lemma_ for token in doc
         if not token.is_stop and token.is_alpha and len(token.text) > 2
@@ -52,6 +69,7 @@ img_wordcloud = base64.b64encode(buffer.getvalue()).decode()
 # APP DASH
 # ========================
 app = Dash(__name__)
+server = app.server  # 👈 necesario para Render
 app.title = "Análisis de Sentimientos - París 2024"
 
 # Estilos globales
@@ -184,14 +202,14 @@ def clasificar_opinion(n_clicks, texto):
             result = client.text_classification(texto, model=MODEL)
             label = result[0]["label"]
             score = result[0]["score"]
-            return f"🧩 Sentimiento detectado: **{label}** (confianza: {score:.2f})"
+            return f"🧩 Sentimiento detectado: {label} (confianza: {score:.2f})"
         except Exception as e:
             return f"❌ Error al clasificar: {e}"
     return ""
 
 # ========================
-# EJECUCIÓN LOCAL
+# SERVIDOR PARA RENDER
 # ========================
 if __name__ == "__main__":
-    print("🚀 Iniciando Dashboard en http://127.0.0.1:8050/")
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 8050)))
+
