@@ -3,3 +3,4 @@ plotly
 pandas
 wordcloud
 gunicorn
+spacy
