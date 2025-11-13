@@ -4,3 +4,4 @@ pandas
 wordcloud
 gunicorn
 spacy
+huggingface_hub
