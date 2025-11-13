@@ -1,0 +1,37 @@
+id,opinion,deporte,sentiment,source
+1,La ceremonia de apertura fue excepcional y mostró lo mejor de París; la gente estaba emocionada.,Ceremonia,positiva,The Guardian
+2,"La ceremonia brilló en lo visual, pero falló como show de televisión para audiencias internacionales.",Ceremonia,neutral,LA Times
+3,Hubo sectores que consideraron la ceremonia ofensiva y problematizaron ciertos segmentos artísticos.,Ceremonia,negativa,Al Jazeera
+4,El caos en el partido de fútbol Argentina vs Morocco fue inaceptable; la federación argentina presentó quejas.,Fútbol,negativa,Reuters
+5,Simone Biles brilló y fue una de las mayores historias positivas de los Juegos; su actuación fue aplaudida mundialmente.,Gimnasia,positiva,AP
+6,Los organizadores recibieron elogios por la limpieza y el respeto ambiental durante la mayoría de las competencias.,General,positiva,France24
+7,"El transporte público funcionó mejor de lo esperado, aunque hubo demoras menores en las horas pico.",General,neutral,El País
+8,Algunos líderes políticos criticaron la ceremonia por considerar que atacaba valores religiosos o tradicionales.,Ceremonia,negativa,Reuters
+9,La prensa internacional celebró la originalidad de la ceremonia y su ambición artística.,Ceremonia,positiva,Le Monde
+10,Atletas de pentatlón y otros expresaron gratitud y que la experiencia olímpica fue memorable para sus carreras.,Pentatlón,positiva,UIPM
+11,El taekwondo de París 2024 dejó una jornada histórica para Latinoamérica con medallas inesperadas en varias categorías.,Taekwondo,positiva,BBC Sport
+12,"El público celebró el nivel técnico del taekwondo, especialmente en las finales femeninas de -57 kg.",Taekwondo,positiva,ESPN
+13,Hubo polémica por decisiones arbitrales en combates decisivos del taekwondo; varios atletas protestaron los resultados.,Taekwondo,negativa,Reuters
+14,"A pesar de algunas quejas sobre el arbitraje, el nivel del taekwondo fue considerado el más alto desde Londres 2012.",Taekwondo,neutral,AP
+15,"Los combates fueron rápidos, estratégicos y muy técnicos; se notó la evolución del taekwondo moderno.",Taekwondo,positiva,BBC Sport
+16,"El partido de baloncesto entre EE.UU. y Francia fue de los más vistos del torneo, con un nivel técnico impresionante.",Baloncesto,positiva,ESPN
+17,"Las pruebas de natación rompieron varios récords olímpicos, destacando el dominio australiano.",Natación,positiva,The Guardian
+18,El nuevo formato de ciclismo urbano atrajo a miles de jóvenes espectadores y fue un éxito organizativo.,Ciclismo,positiva,Le Parisien
+19,Atletas africanos denunciaron falta de cobertura mediática en comparación con potencias europeas.,General,negativa,DW
+20,El judo mostró un alto nivel técnico y respeto entre competidores; Japón volvió a dominar el medallero.,Judo,positiva,NHK
+21,"El precio de las entradas fue criticado por los espectadores locales, considerados demasiado elevados.",General,negativa,France24
+22,"El sistema de transporte mejoró durante la segunda semana, aunque persistieron quejas en zonas rurales.",General,neutral,Euronews
+23,"Las fuertes lluvias afectaron la final de atletismo, retrasando pruebas durante más de una hora.",Atletismo,negativa,AP
+24,"El ambiente en las tribunas fue festivo, con una gran participación internacional.",General,positiva,BBC
+25,Algunos atletas se quejaron del calor extremo en las pruebas de maratón y triatlón.,Atletismo,negativa,Reuters
+26,Los organizadores recibieron elogios por la puntualidad en la mayoría de los eventos deportivos.,General,positiva,CNN
+27,Varios deportistas destacaron la hospitalidad del público parisino durante toda la competición.,General,positiva,El País
+28,"Algunos eventos menores tuvieron baja asistencia, especialmente los celebrados fuera del centro de París.",Varios,neutral,Le Figaro
+29,El boxeo olímpico generó críticas por las decisiones de los jueces en semifinales masculinas.,Boxeo,negativa,BBC Sport
+30,"La ceremonia de clausura fue colorida y emotiva, cerrando los Juegos con un mensaje de unión.",Ceremonia,positiva,The Guardian
+31,La venta de merchandising fue desorganizada y causó largas filas en varios puntos oficiales.,General,negativa,Reuters
+32,"El turismo en París se incrementó un 15% durante los Juegos, según datos del gobierno francés.",Turismo,positiva,France Info
+33,"El sistema de accesos a los estadios fue eficiente, aunque algunos asistentes reportaron confusión inicial.",General,neutral,AP
+34,La experiencia para los voluntarios fue valorada como positiva; muchos desean participar en futuros eventos.,General,positiva,IOC
+35,Las nuevas disciplinas urbanas como el breakdance dividieron opiniones entre los fanáticos tradicionales.,Varios,neutral,El Mundo
+36,"Los Juegos Olímpicos de París fueron considerados los más sostenibles en décadas, aunque con desafíos logísticos.",General,neutral,Reuters
