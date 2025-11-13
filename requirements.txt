@@ -5,3 +5,5 @@ wordcloud
 spacy
 huggingface_hub
 gunicorn
+numpy
+dash-tools
